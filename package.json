@@ -1,17 +1,89 @@
 {
-  "name": "@rancheng/basic",
+  "name": "@business/basic",
   "version": "0.1.0",
   "private": true,
-  "main": "./index.ts",
+  "main": "src/index.ts",
+  "files": [
+    "build",
+    "mock",
+    "public",
+    "src"
+  ],
   "scripts": {
     "serve": "webpack-dev-server --mode development",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "svg.js": "^2.6.6"
+    "@mydreamplus/aglarond": "0.5.6",
+    "@types/lodash": "^4.14.117",
+    "@types/node": "^10.11.7",
+    "@vue/cli-plugin-babel": "^3.0.1",
+    "@vue/cli-plugin-typescript": "^3.0.1",
+    "@vue/cli-service": "^3.0.1",
+    "axios": "^0.18.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.0-0",
+    "babel-plugin-dynamic-import-node": "^2.0.0",
+    "dom-storage": "^2.1.0",
+    "element-resize-detector": "^1.1.14",
+    "element-ui": "^2.4.11",
+    "js-cookie": "^2.2.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.22.2",
+    "typescript": "^3.0.3",
+    "url-search-params-polyfill": "^5.0.0",
+    "vue": "^2.5.20",
+    "vue-class-component": "^6.0.0",
+    "vue-property-decorator": "^7.0.0",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "vuex-class": "^0.3.1",
+    "vuex-persistedstate": "^2.5.4",
+    "vuex-router-sync": "^5.0.0",
+    "vue-template-compiler": "^2.5.20",
+    "sass-loader": "^7.1.0",
+    "node-sass": "4.9.3",
+    "babel-plugin-import": "^1.8.0",
+    "lint-staged": "^7.2.2"
   },
   "devDependencies": {
-    "gulp": "^4.0.0"
+    "@babel/core": "7.0.0-beta.47",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-helper-vue-jsx-merge-props": "^2.0.3",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-vue-jsx": "^4.0.1",
+    "babel-plugin-component": "^1.1.1",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "express": "^4.16.3",
+    "html-webpack-plugin": "^3.2.0",
+    "sass-resources-loader": "^1.3.3",
+    "style-loader": "^0.23.0",
+    "ts-loader": "^5.1.1",
+    "url-loader": "^1.1.1",
+    "vue-loader": "^15.4.2",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
   }
 }
